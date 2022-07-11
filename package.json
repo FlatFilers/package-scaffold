@@ -1,0 +1,37 @@
+{
+  "name": "@flatfile/package-scaffold",
+  "version": "0.0.0",
+  "description": "Basic package scaffold",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlatFilers/package-scaffold.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlatFilers/package-scaffold/issues"
+  },
+  "homepage": "https://github.com/FlatFilers/package-scaffold#readme",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "lint": "TIMING=1 eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "jest --runInBand --detectOpenHandles --forceExit --passWithNoTests"
+  },
+  "devDependencies": {
+    "@flatfile/eslint-config-platform-sdk": "*",
+    "@flatfile/ts-config-platform-sdk": "*",
+    "@types/jest": "^28.1.4",
+    "eslint": "^8.19.0",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
