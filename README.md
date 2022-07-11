@@ -7,9 +7,9 @@ This package scaffold is intended to be used with the SDK [Monorepo](https://git
 > **Warning**
 > 
 > In order to publish this package you'll need to:
-> * update the `name` in package.json
-> * set `private: false` in package.json
-> * set `publishConfig.access` in package.json to appropriate access level  
+> 1. set `name` in **package.json**
+> 2. set `private: false` in **package.json**
+> 3. set `publishConfig.access` in **package.json** to appropriate access level  
 
 ### Useful Commands
 
